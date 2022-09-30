@@ -12,6 +12,8 @@ interface MainScreenUseCase {
 
     suspend fun delete(note: Note)
 
+    suspend fun update(note: Note)
+
     suspend fun changePin(note: Note)
 
     suspend fun changeTitleState(note: Note)

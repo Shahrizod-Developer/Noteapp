@@ -4,6 +4,7 @@ import androidx.room.Embedded
 import androidx.room.PrimaryKey
 import uz.gita.noteapp.data.local.room.entity.NoteEntity
 import uz.gita.noteapp.data.local.room.entity.ToDoEntity
+import java.io.Serializable
 
 data class Note(
     val id: Int,
@@ -15,6 +16,7 @@ data class Note(
     var statusPin: Int,
     var statusTitle: Int,
     val status: Int
-){
-    fun toNoteEntity() = NoteEntity(id, title, noteList, desc, time, statusDelete, statusPin, statusTitle, status)
+) : Serializable {
+    fun toNoteEntity() =
+        NoteEntity(id, title, noteList, desc, time, statusDelete, statusPin, statusTitle, status)
 }

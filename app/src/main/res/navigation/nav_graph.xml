@@ -7,7 +7,14 @@
     <fragment
         android:id="@+id/mainScreen"
         android:name="uz.gita.noteapp.presentation.ui.screen.fragment.main.MainScreen"
-        android:label="MainScreen" />
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_addScreen"
+            app:destination="@id/addScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_updateScreen"
+            app:destination="@id/updateScreen" />
+    </fragment>
 
     <fragment
         android:id="@+id/splashScreen"
@@ -19,4 +26,12 @@
             app:popEnterAnim="@android:anim/bounce_interpolator"
             app:popUpTo="@id/nav_graph" />
     </fragment>
+    <fragment
+        android:id="@+id/addScreen"
+        android:name="uz.gita.noteapp.presentation.ui.screen.fragment.add.AddScreen"
+        android:label="AddScreen" />
+    <fragment
+        android:id="@+id/updateScreen"
+        android:name="uz.gita.noteapp.presentation.ui.screen.fragment.update.UpdateScreen"
+        android:label="UpdateScreen" />
 </navigation>

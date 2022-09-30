@@ -43,6 +43,10 @@ class MainScreenUseCaseImpl : MainScreenUseCase {
         repository.update(noteList)
     }
 
+    override suspend fun update(note: Note) {
+        repository.update(note)
+    }
+
     override suspend fun delete(note: Note) {
 
         if (note.statusDelete == 0) {

@@ -12,9 +12,9 @@ import uz.gita.noteapp.domain.usecase.MainScreenUseCase
 import uz.gita.noteapp.domain.usecase.impl.MainScreenUseCaseImpl
 import uz.gita.noteapp.presentation.ui.viewmodel.MainScreenViewModel
 
-class MainScreenViewModelImpl(private val mainScreenUseCase: MainScreenUseCaseImpl) :
+class MainScreenViewModelImpl :
     MainScreenViewModel, ViewModel() {
-
+    private val mainScreenUseCase = MainScreenUseCaseImpl()
     override val openAddScreenLiveData: LiveData<Unit> = MutableLiveData()
     override val openUpdateScreenLiveData: LiveData<Unit> = MutableLiveData()
     override val showDeleteDialogLiveData: LiveData<Unit> = MutableLiveData()
